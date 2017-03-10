@@ -1,12 +1,12 @@
 {
   "vendor": {
-    "js": "/mazhuravlev/thp-prototype/vendor.98e62b8faba1d91d95c4.bundle.js"
+    "js": "/thp-prototype/vendor.98e62b8faba1d91d95c4.bundle.js"
   },
   "main": {
-    "js": "/mazhuravlev/thp-prototype/main.d5d2673b7f55ef4a7f8f.bundle.js",
-    "css": "/mazhuravlev/thp-prototype/main.d799841e5ce53c2fb9389a7567f94401.css"
+    "js": "/thp-prototype/main.d5d2673b7f55ef4a7f8f.bundle.js",
+    "css": "/thp-prototype/main.d799841e5ce53c2fb9389a7567f94401.css"
   },
   "polyfills": {
-    "js": "/mazhuravlev/thp-prototype/polyfills.ff519995e6a0dcdc2be7.bundle.js"
+    "js": "/thp-prototype/polyfills.5bec1b988605d159bd56.bundle.js"
   }
 }
