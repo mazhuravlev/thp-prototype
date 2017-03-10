@@ -1,12 +1,12 @@
 {
   "vendor": {
-    "js": "/thp-prototype/vendor.98e62b8faba1d91d95c4.bundle.js"
+    "js": "/thp-prototype/vendor.b02a7c00860654f7b1ef.bundle.js"
   },
   "main": {
-    "js": "/thp-prototype/main.d5d2673b7f55ef4a7f8f.bundle.js",
+    "js": "/thp-prototype/main.ce54d7d1d2c6d5256abd.bundle.js",
     "css": "/thp-prototype/main.d799841e5ce53c2fb9389a7567f94401.css"
   },
   "polyfills": {
-    "js": "/thp-prototype/polyfills.5bec1b988605d159bd56.bundle.js"
+    "js": "/thp-prototype/polyfills.4608efd40ce2fdbcdc56.bundle.js"
   }
 }

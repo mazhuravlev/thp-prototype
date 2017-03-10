@@ -1,0 +1,492 @@
+[
+  {
+    "type": "draw2d.shape.node.Start",
+    "id": "c1bedd78-0ea2-5885-3e1c-df806d319a4e",
+    "x": 28,
+    "y": 374,
+    "width": 80.32799999999986,
+    "height": 30,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Узел 0.9814440049433153"
+    },
+    "cssClass": "draw2d_shape_node_Start",
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "labels": [
+      {
+        "type": "draw2d.shape.note.PostIt",
+        "id": "bf115f4a-290f-f1e6-2178-5c8f3e2de1cc",
+        "x": -8,
+        "y": -31,
+        "width": 86.671875,
+        "height": 23.15625,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_shape_note_PostIt",
+        "ports": [],
+        "bgColor": "none",
+        "color": "#FFFFFF",
+        "stroke": 1,
+        "radius": 5,
+        "dasharray": null,
+        "text": "Начало работы",
+        "outlineStroke": 0,
+        "outlineColor": "none",
+        "fontSize": 14,
+        "fontColor": "#000000",
+        "fontFamily": null,
+        "editor": "draw2d.ui.LabelInplaceEditor",
+        "locator": "draw2d.layout.locator.DraggableLocator"
+      }
+    ]
+  },
+  {
+    "type": "draw2d.shape.node.Block",
+    "id": "7ab24ce4-edde-0ca6-f324-1372060ccc1e",
+    "x": 218,
+    "y": 339,
+    "width": 100,
+    "height": 100,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "подготовка"
+    },
+    "cssClass": "draw2d_shape_node_Block",
+    "ports": [
+      {
+        "type": "draw2d.InputPort",
+        "id": "968fa6b2-f8e9-0edd-2c4f-c63ad2ae3a5a",
+        "width": 10,
+        "height": 10,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_InputPort",
+        "bgColor": "#4F6870",
+        "color": "#1B1B1B",
+        "stroke": 1,
+        "dasharray": null,
+        "maxFanOut": 9007199254740991,
+        "name": "input0",
+        "port": "draw2d.InputPort",
+        "locator": "draw2d.layout.locator.InputPortLocator"
+      },
+      {
+        "type": "draw2d.OutputPort",
+        "id": "e023ae5f-0570-effd-f2d8-06c8c35bea17",
+        "width": 10,
+        "height": 10,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_OutputPort",
+        "bgColor": "#4F6870",
+        "color": "#1B1B1B",
+        "stroke": 1,
+        "dasharray": null,
+        "maxFanOut": 9007199254740991,
+        "name": "output0",
+        "port": "draw2d.OutputPort",
+        "locator": "draw2d.layout.locator.OutputPortLocator"
+      }
+    ],
+    "bgColor": "#02C97F",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 0,
+    "dasharray": null,
+    "labels": [
+      {
+        "type": "draw2d.shape.note.PostIt",
+        "id": "e85aeede-1bc6-a7e5-0869-11687896da5b",
+        "x": 1,
+        "y": -35,
+        "width": 72.546875,
+        "height": 23.15625,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_shape_note_PostIt",
+        "ports": [],
+        "bgColor": "none",
+        "color": "#FFFFFF",
+        "stroke": 1,
+        "radius": 5,
+        "dasharray": null,
+        "text": "Просто блок",
+        "outlineStroke": 0,
+        "outlineColor": "none",
+        "fontSize": 14,
+        "fontColor": "#000000",
+        "fontFamily": null,
+        "editor": "draw2d.ui.LabelInplaceEditor",
+        "locator": "draw2d.layout.locator.DraggableLocator"
+      }
+    ]
+  },
+  {
+    "type": "draw2d.shape.node.End",
+    "id": "1baa4d58-4c92-0f48-0a6a-fe84001f9cf0",
+    "x": 591,
+    "y": 367,
+    "width": 107.75383040000031,
+    "height": 34.45259520000013,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Узел 0.2761797664891743"
+    },
+    "cssClass": "draw2d_shape_node_End",
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "labels": []
+  },
+  {
+    "type": "draw2d.shape.node.Block",
+    "id": "4d0645db-b982-c6a9-f40f-1032d8664e82",
+    "x": 412,
+    "y": 446,
+    "width": 100,
+    "height": 100,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Узел 0.7976406449506095"
+    },
+    "cssClass": "draw2d_shape_node_Block",
+    "ports": [
+      {
+        "type": "draw2d.InputPort",
+        "id": "dc1cd862-f18c-63dc-2104-bf856c354dd5",
+        "width": 10,
+        "height": 10,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_InputPort",
+        "bgColor": "#4F6870",
+        "color": "#1B1B1B",
+        "stroke": 1,
+        "dasharray": null,
+        "maxFanOut": 9007199254740991,
+        "name": "input0",
+        "port": "draw2d.InputPort",
+        "locator": "draw2d.layout.locator.InputPortLocator"
+      },
+      {
+        "type": "draw2d.OutputPort",
+        "id": "40e5b162-758d-d812-2778-ee6dd3ae9128",
+        "width": 10,
+        "height": 10,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_OutputPort",
+        "bgColor": "#4F6870",
+        "color": "#1B1B1B",
+        "stroke": 1,
+        "dasharray": null,
+        "maxFanOut": 9007199254740991,
+        "name": "output0",
+        "port": "draw2d.OutputPort",
+        "locator": "draw2d.layout.locator.OutputPortLocator"
+      }
+    ],
+    "bgColor": "#02C97F",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 0,
+    "dasharray": null,
+    "labels": []
+  },
+  {
+    "type": "draw2d.shape.node.Block",
+    "id": "3d57126e-9919-02e6-cf2b-1ad808776d6d",
+    "x": 413,
+    "y": 226,
+    "width": 100,
+    "height": 100,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Узел 0.48258251783244166"
+    },
+    "cssClass": "draw2d_shape_node_Block",
+    "ports": [
+      {
+        "type": "draw2d.InputPort",
+        "id": "bc45b620-fe1b-7ef4-ff72-782eebdfcd0c",
+        "width": 10,
+        "height": 10,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_InputPort",
+        "bgColor": "#4F6870",
+        "color": "#1B1B1B",
+        "stroke": 1,
+        "dasharray": null,
+        "maxFanOut": 9007199254740991,
+        "name": "input0",
+        "port": "draw2d.InputPort",
+        "locator": "draw2d.layout.locator.InputPortLocator"
+      },
+      {
+        "type": "draw2d.OutputPort",
+        "id": "e7ceaf63-edee-41ef-04dd-339db476dce1",
+        "width": 10,
+        "height": 10,
+        "alpha": 1,
+        "angle": 0,
+        "userData": {},
+        "cssClass": "draw2d_OutputPort",
+        "bgColor": "#4F6870",
+        "color": "#1B1B1B",
+        "stroke": 1,
+        "dasharray": null,
+        "maxFanOut": 9007199254740991,
+        "name": "output0",
+        "port": "draw2d.OutputPort",
+        "locator": "draw2d.layout.locator.OutputPortLocator"
+      }
+    ],
+    "bgColor": "#02C97F",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 0,
+    "dasharray": null,
+    "labels": []
+  },
+  {
+    "type": "draw2d.Connection",
+    "id": "0f833384-32f2-2e17-0bf9-7bc4a504a276",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {},
+    "cssClass": "draw2d_Connection",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.OrthogonalSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 318,
+        "y": 389
+      },
+      {
+        "x": 365,
+        "y": 389
+      },
+      {
+        "x": 365,
+        "y": 496
+      },
+      {
+        "x": 412,
+        "y": 496
+      }
+    ],
+    "router": "draw2d.layout.connection.InteractiveManhattanConnectionRouter",
+    "radius": 7,
+    "routingMetaData": {
+      "routedByUserInteraction": false,
+      "fromDir": 1,
+      "toDir": 3
+    },
+    "source": {
+      "node": "7ab24ce4-edde-0ca6-f324-1372060ccc1e",
+      "port": "output0"
+    },
+    "target": {
+      "node": "4d0645db-b982-c6a9-f40f-1032d8664e82",
+      "port": "input0"
+    }
+  },
+  {
+    "type": "draw2d.Connection",
+    "id": "8524a7e9-3ae9-8fb5-1603-6fec55b956e2",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {},
+    "cssClass": "draw2d_Connection",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.OrthogonalSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 318,
+        "y": 389
+      },
+      {
+        "x": 365.5,
+        "y": 389
+      },
+      {
+        "x": 365.5,
+        "y": 276
+      },
+      {
+        "x": 413,
+        "y": 276
+      }
+    ],
+    "router": "draw2d.layout.connection.InteractiveManhattanConnectionRouter",
+    "radius": 7,
+    "routingMetaData": {
+      "routedByUserInteraction": false,
+      "fromDir": 1,
+      "toDir": 3
+    },
+    "source": {
+      "node": "7ab24ce4-edde-0ca6-f324-1372060ccc1e",
+      "port": "output0"
+    },
+    "target": {
+      "node": "3d57126e-9919-02e6-cf2b-1ad808776d6d",
+      "port": "input0"
+    }
+  },
+  {
+    "type": "draw2d.Connection",
+    "id": "37c15526-0e9d-cff0-241a-423c81a53ae7",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {},
+    "cssClass": "draw2d_Connection",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.OrthogonalSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 512,
+        "y": 496
+      },
+      {
+        "x": 551.4360128000001,
+        "y": 496
+      },
+      {
+        "x": 551.4360128000001,
+        "y": 384.22629760000007
+      },
+      {
+        "x": 590.8720256,
+        "y": 384.22629760000007
+      }
+    ],
+    "router": "draw2d.layout.connection.InteractiveManhattanConnectionRouter",
+    "radius": 7,
+    "routingMetaData": {
+      "routedByUserInteraction": false,
+      "fromDir": 1,
+      "toDir": 3
+    },
+    "source": {
+      "node": "4d0645db-b982-c6a9-f40f-1032d8664e82",
+      "port": "output0"
+    },
+    "target": {
+      "node": "1baa4d58-4c92-0f48-0a6a-fe84001f9cf0",
+      "port": "Port"
+    }
+  },
+  {
+    "type": "draw2d.Connection",
+    "id": "1b4ebc9e-4b1c-90b4-c4b9-dd5f0e8c0c42",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {},
+    "cssClass": "draw2d_Connection",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.OrthogonalSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 513,
+        "y": 276
+      },
+      {
+        "x": 551.9360128000001,
+        "y": 276
+      },
+      {
+        "x": 551.9360128000001,
+        "y": 384.22629760000007
+      },
+      {
+        "x": 590.8720256,
+        "y": 384.22629760000007
+      }
+    ],
+    "router": "draw2d.layout.connection.InteractiveManhattanConnectionRouter",
+    "radius": 7,
+    "routingMetaData": {
+      "routedByUserInteraction": false,
+      "fromDir": 1,
+      "toDir": 3
+    },
+    "source": {
+      "node": "3d57126e-9919-02e6-cf2b-1ad808776d6d",
+      "port": "output0"
+    },
+    "target": {
+      "node": "1baa4d58-4c92-0f48-0a6a-fe84001f9cf0",
+      "port": "Port"
+    }
+  },
+  {
+    "type": "draw2d.Connection",
+    "id": "a9effe61-0f9a-e96e-35a0-310ea51816b3",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {},
+    "cssClass": "draw2d_Connection",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.OrthogonalSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 107.79200000000026,
+        "y": 389
+      },
+      {
+        "x": 218,
+        "y": 389
+      }
+    ],
+    "router": "draw2d.layout.connection.InteractiveManhattanConnectionRouter",
+    "radius": 7,
+    "routingMetaData": {
+      "routedByUserInteraction": false,
+      "fromDir": 1,
+      "toDir": 3
+    },
+    "source": {
+      "node": "c1bedd78-0ea2-5885-3e1c-df806d319a4e",
+      "port": "Port"
+    },
+    "target": {
+      "node": "7ab24ce4-edde-0ca6-f324-1372060ccc1e",
+      "port": "input0"
+    }
+  }
+]
