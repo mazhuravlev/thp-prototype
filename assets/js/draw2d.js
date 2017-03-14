@@ -52213,6 +52213,7 @@ draw2d.io.json.Reader = draw2d.io.Reader.extend({
                     o.setSource(source);
                     o.setTarget(target);
                 }
+				debugger;
                 o.setPersistentAttributes(element);
                 canvas.add(o);
                 result.add(o);
