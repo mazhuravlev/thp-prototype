@@ -2,16 +2,16 @@ draw2d.shape.node.Block = draw2d.SetFigure.extend({
   NAME: 'draw2d.shape.node.Block',
   init:function(attr, setter, getter)
   {
-    this._super( $.extend({stroke:0, bgColor:null, width:100,height:100},attr), setter, getter);
+    this._super( $.extend({stroke:0, bgColor:null, width:90,height:90},attr), setter, getter);
     var port;
     // Port
-    port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(0.18079999999997654, 50));
+    port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-0.26986666666668196, 50));
     port.setConnectionDirection();
     port.setBackgroundColor("#37B1DE");
     port.setName("Input");
     port.setMaxFanOut(20);
     // Port
-    port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(100.36159999999995, 50));
+    port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(99.85457777777786, 50));
     port.setConnectionDirection();
     port.setBackgroundColor("#37B1DE");
     port.setName("Output");
@@ -22,8 +22,8 @@ draw2d.shape.node.Block = draw2d.SetFigure.extend({
   createShapeElement : function()
   {
     var shape = this._super();
-    this.originalWidth = 100;
-    this.originalHeight= 100;
+    this.originalWidth = 90;
+    this.originalHeight= 90;
     return shape;
   },
 
@@ -32,12 +32,12 @@ draw2d.shape.node.Block = draw2d.SetFigure.extend({
     this.canvas.paper.setStart();
 
     // BoundingBox
-    shape = this.canvas.paper.path("M0,0 L100,0 L100,100 L0,100");
+    shape = this.canvas.paper.path("M0,0 L90,0 L90,90 L0,90");
     shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
     shape.data("name","BoundingBox");
 
     // Rectangle
-    shape = this.canvas.paper.path('M0 0L100 0L100 100L0 100Z');
+    shape = this.canvas.paper.path('M0,0 L90,0 L90,90 L0,90 L0,0');
     shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#00BD7E","dasharray":null,"opacity":1});
     shape.data("name","Rectangle");
 
@@ -357,7 +357,9 @@ draw2d.shape.node.Operation = draw2d.SetFigure.extend({
 
       // instantiate the locator
       var locator =  eval("new "+json.locator+"()");
-
+      if(json.type === "draw2d.shape.basic.CipherLabel") {
+        figure.setText(json.text);
+      }
       // add the new figure as child to this figure
       this.add(figure, locator);
     },this));
@@ -556,7 +558,7 @@ draw2d.shape.node.End = draw2d.SetFigure.extend({
   init:function(attr, setter, getter)
   {
     this._super( $.extend({stroke:0, bgColor:null, width:107.75383040000031,height:34.45259520000013},attr), setter, getter);
-    let port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-0.11876552278922103, 50));
+    let port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-0.11876552278922103, 45));
     port.setConnectionDirection();
     port.setBackgroundColor("#37B1DE");
     port.setName("Port");
@@ -1297,3 +1299,342 @@ draw2d.shape.node.Product = draw2d.SetFigure.extend({
     },this));
   }
 });
+
+draw2d.shape.basic.LabelHandle = draw2d.SetFigure.extend({
+  NAME: "draw2d.shape.basic.LabelHandle",
+  init:function(attr, setter, getter)
+  {
+    this._super( $.extend({stroke:0, bgColor:null, width:98.63167999999973,height:39.97695999999951},attr), setter, getter);
+    var port;
+    this.persistPorts=false;
+  },
+
+  createShapeElement : function()
+  {
+    let shape = this._super();
+    this.originalWidth = 98.63167999999973;
+    this.originalHeight= 39.97695999999951;
+    return shape;
+  },
+
+  createSet: function()
+  {
+    this.canvas.paper.setStart();
+
+    // BoundingBox
+    shape = this.canvas.paper.path("M0,0 L98.63167999999973,0 L98.63167999999973,39.97695999999951 L0,39.97695999999951");
+    shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
+    shape.data("name","BoundingBox");
+
+    // Line_shadow
+    shape = this.canvas.paper.path('M98.5 39.5L98.5,0.5L0.5,0.5');
+    shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+    shape.data("name","Line_shadow");
+
+    // Line
+    shape = this.canvas.paper.path('M98.5 39.5L98.5,0.5L0.5,0.5');
+    shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+    shape.data("name","Line");
+
+
+    return this.canvas.paper.setFinish();
+  },
+
+  applyAlpha: function()
+  {
+  },
+
+  layerGet: function(name, attributes)
+  {
+    if(this.svgNodes===null) return null;
+
+    var result=null;
+    this.svgNodes.some(function(shape){
+      if(shape.data("name")===name){
+        result=shape;
+      }
+      return result!==null;
+    });
+
+    return result;
+  },
+
+  layerAttr: function(name, attributes)
+  {
+    if(this.svgNodes===null) return;
+
+    this.svgNodes.forEach(function(shape){
+      if(shape.data("name")===name){
+        shape.attr(attributes);
+      }
+    });
+  },
+
+  layerShow: function(name, flag, duration)
+  {
+    if(this.svgNodes===null) return;
+
+    if(duration){
+      this.svgNodes.forEach(function(node){
+        if(node.data("name")===name){
+          if(flag){
+            node.attr({ opacity : 0 }).show().animate({ opacity : 1 }, duration);
+          }
+          else{
+            node.animate({ opacity : 0 }, duration, function () { this.hide() });
+          }
+        }
+      });
+    }
+    else{
+      this.svgNodes.forEach(function(node){
+        if(node.data("name")===name){
+          if(flag){node.show();}
+          else{node.hide();}
+        }
+      });
+    }
+  },
+
+  calculate: function()
+  {
+  },
+
+  onStart: function()
+  {
+  },
+
+  onStop:function()
+  {
+  },
+
+  getParameterSettings: function()
+  {
+    return [];
+  },
+
+  /**
+   * @method
+   */
+  addPort: function(port, locator)
+  {
+    this._super(port, locator);
+    return port;
+  },
+
+  /**
+   * @method
+   * Return an objects with all important attributes for XML or JSON serialization
+   *
+   * @returns {Object}
+   */
+  getPersistentAttributes : function()
+  {
+    var memento = this._super();
+
+    // add all decorations to the memento
+    //
+    memento.labels = [];
+    this.children.each(function(i,e){
+      var labelJSON = e.figure.getPersistentAttributes();
+      labelJSON.locator=e.locator.NAME;
+      memento.labels.push(labelJSON);
+    });
+
+    return memento;
+  },
+
+  /**
+   * @method
+   * Read all attributes from the serialized properties and transfer them into the shape.
+   *
+   * @param {Object} memento
+   * @returns
+   */
+  setPersistentAttributes : function(memento)
+  {
+    this._super(memento);
+    this.resetChildren();
+    $.each(memento.labels, $.proxy(function(i,json){
+      var figure =  eval("new "+json.type+"()");
+      figure.attr(json);
+      var locator =  eval("new "+json.locator+"()");
+      this.add(figure, locator);
+    },this));
+  }
+});
+
+draw2d.shape.basic.CipherLabel = draw2d.SetFigure.extend({
+  NAME: "draw2d.shape.basic.CipherLabel",
+  text: '',
+  init:function(attr, setter, getter)
+  {
+    this._super( $.extend({stroke:0, bgColor:null, width:78.796875,height:44.392960000000926},attr), setter, getter);
+    var port;
+    this.persistPorts=false;
+  },
+  setText: function(text){
+    this.text = text;
+  },
+  createShapeElement : function()
+  {
+    var shape = this._super();
+    this.originalWidth = 78.796875;
+    this.originalHeight= 44.392960000000926;
+    return shape;
+  },
+
+  createSet: function()
+  {
+    this.canvas.paper.setStart();
+
+    // BoundingBox
+    shape = this.canvas.paper.path("M0,0 L78.796875,0 L78.796875,44.392960000000926 L0,44.392960000000926");
+    shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
+    shape.data("name","BoundingBox");
+
+    // Label
+    shape = this.canvas.paper.text(0,0,'A1.B2.C3');
+    shape.attr({"x":5,"y":13.84375,"text-anchor":"start","text":this.text,"font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+    shape.data("name","Label");
+
+    // Line_shadow
+    shape = this.canvas.paper.path('M73.5 44.5L73.5,40.5L73.5,24.5L3.5,23.5');
+    shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+    shape.data("name","Line_shadow");
+
+    // Line
+    shape = this.canvas.paper.path('M73.5 44.5L73.5,40.5L73.5,24.5L3.5,23.5');
+    shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+    shape.data("name","Line");
+
+
+    return this.canvas.paper.setFinish();
+  },
+
+  applyAlpha: function()
+  {
+  },
+
+  layerGet: function(name, attributes)
+  {
+    if(this.svgNodes===null) return null;
+
+    var result=null;
+    this.svgNodes.some(function(shape){
+      if(shape.data("name")===name){
+        result=shape;
+      }
+      return result!==null;
+    });
+
+    return result;
+  },
+
+  layerAttr: function(name, attributes)
+  {
+    if(this.svgNodes===null) return;
+
+    this.svgNodes.forEach(function(shape){
+      if(shape.data("name")===name){
+        shape.attr(attributes);
+      }
+    });
+  },
+
+  layerShow: function(name, flag, duration)
+  {
+    if(this.svgNodes===null) return;
+
+    if(duration){
+      this.svgNodes.forEach(function(node){
+        if(node.data("name")===name){
+          if(flag){
+            node.attr({ opacity : 0 }).show().animate({ opacity : 1 }, duration);
+          }
+          else{
+            node.animate({ opacity : 0 }, duration, function () { this.hide() });
+          }
+        }
+      });
+    }
+    else{
+      this.svgNodes.forEach(function(node){
+        if(node.data("name")===name){
+          if(flag){node.show();}
+          else{node.hide();}
+        }
+      });
+    }
+  },
+
+  calculate: function()
+  {
+  },
+
+  onStart: function()
+  {
+  },
+
+  onStop:function()
+  {
+  },
+
+  getParameterSettings: function()
+  {
+    return [];
+  },
+
+  /**
+   * @method
+   */
+  addPort: function(port, locator)
+  {
+    this._super(port, locator);
+    return port;
+  },
+
+  /**
+   * @method
+   * Return an objects with all important attributes for XML or JSON serialization
+   *
+   * @returns {Object}
+   */
+  getPersistentAttributes : function()
+  {
+    let memento = this._super();
+
+    // add all decorations to the memento
+    //
+    memento.labels = [];
+    memento.text = this.text;
+    this.children.each(function(i,e){
+      var labelJSON = e.figure.getPersistentAttributes();
+      labelJSON.locator=e.locator.NAME;
+      memento.labels.push(labelJSON);
+    });
+    return memento;
+  },
+
+  /**
+   * @method
+   * Read all attributes from the serialized properties and transfer them into the shape.
+   *
+   * @param {Object} memento
+   * @returns
+   */
+  setPersistentAttributes : function(memento)
+  {
+    console.log(memento);
+    this._super(memento);
+    this.resetChildren();
+    this.setText(memento.text);
+    $.each(memento.labels, $.proxy(function(i,json){
+      let figure =  eval("new "+json.type+"()");
+      figure.attr(json);
+      let locator =  eval("new "+json.locator+"()");
+      this.add(figure, locator);
+    },this));
+  }
+});
+

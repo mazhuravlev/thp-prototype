@@ -20722,8 +20722,11 @@ draw2d.Canvas = Class.extend(
 
         // installed to all added figures to avoid that a figure can be placed outside the canvas area
         // during a drag&drop operation
-        this.regionDragDropConstraint =  new draw2d.policy.figure.RegionEditPolicy(0,0,this.getWidth(), this.getHeight());
-
+        if($.isNumeric(height)){
+			this.regionDragDropConstraint = new draw2d.policy.figure.RegionEditPolicy(0, 0, width, height);
+		} else {
+			this.regionDragDropConstraint = new draw2d.policy.figure.RegionEditPolicy(0,0,this.getWidth(), this.getHeight());
+		}
         // event handling since version 5.0.0
         this.eventSubscriptions = {};
 
